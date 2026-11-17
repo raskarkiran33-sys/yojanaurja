@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://yojanaurja.devidlaid004.workers.dev/sitemap.xml
