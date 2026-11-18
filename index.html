@@ -5,80 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>योजनाऊर्जा - सरकारी योजनाएँ और सोलर ऊर्जा की जानकारी</title>
 <meta name="description" content="भारत सरकार की योजनाएँ, महाराष्ट्र शासन योजना, सोलर पैनल सब्सिडी, पीएम सूर्य घर, छात्रवृत्ति और आवेदन गाइड हिंदी में।">
-<meta name="keywords" content="सरकारी योजनाएँ, महाराष्ट्र योजना, सोलर सब्सिडी, पीएम सूर्य घर, सोलर पैनल, महाडीबीटी, किसान योजना, Yojana Urja">
 <meta name="robots" content="index, follow">
-<meta name="theme-color" content="#071a18">
 <link rel="canonical" href="https://yojanaurja.devidlaid004.workers.dev/">
-
-<style>
-*{margin:0;padding:0;box-sizing:border-box}
-:root{--bg:#071a18;--card:#102622;--green:#b7f36b;--text:#f4f7f2;--muted:#a9bbb2;--border:#23433a}
-body{font-family:Arial,sans-serif;background:var(--bg);color:var(--text);line-height:1.8}
-a{text-decoration:none;color:inherit}
-header{position:sticky;top:0;z-index:100;background:#071a18ed;backdrop-filter:blur(15px);border-bottom:1px solid var(--border);padding:14px 5%}
-.nav{max-width:1200px;margin:auto;display:flex;justify-content:space-between;align-items:center;gap:15px}
-.logo{font-size:23px;font-weight:800}
-.logo span{color:var(--green)}
-nav{display:flex;gap:20px;flex-wrap:wrap}
-nav a{font-size:14px;color:var(--muted)}
-nav a:hover{color:var(--green)}
-.menu{display:none;background:none;color:white;border:0;font-size:25px}
-.container{max-width:1150px;margin:auto;padding:0 20px}
-.hero{padding:65px 20px 55px;background:radial-gradient(ellipse at 80% 20%,#28533a 0%,transparent 45%)}
-.hero-grid{display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:35px}
-.tag{display:inline-block;background:#183a2b;color:var(--green);padding:6px 13px;border-radius:30px;font-size:12px}
-h1{font-size:clamp(30px,5vw,50px);line-height:1.3;margin:20px 0}
-h1 span{color:var(--green)}
-.hero p{color:var(--muted);max-width:570px}
-.hero-img{width:100%;height:310px;object-fit:cover;border-radius:20px;border:1px solid var(--border)}
-.btn{display:inline-block;background:var(--green);color:#10251b;padding:12px 20px;border-radius:9px;font-weight:bold;margin:22px 8px 0 0}
-.btn-outline{background:transparent;color:white;border:1px solid var(--border)}
-.section{padding:55px 0}
-.section-title{font-size:29px;margin-bottom:8px}
-.section-sub{color:var(--muted);margin-bottom:25px}
-.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.card{background:var(--card);border:1px solid var(--border);border-radius:15px;padding:22px;transition:.2s}
-.card:hover{transform:translateY(-4px);border-color:var(--green)}
-.card .icon{font-size:30px;margin-bottom:12px}
-.card h3{font-size:19px;margin-bottom:8px}
-.card p{font-size:14px;color:var(--muted)}
-.card a{display:inline-block;color:var(--green);font-size:13px;margin-top:15px;font-weight:bold}
-.feature{background:linear-gradient(120deg,#173b2b,#102622);border:1px solid var(--border);border-radius:18px;padding:30px}
-.feature h2{font-size:28px;margin-bottom:10px}
-.feature p{color:var(--muted)}
-.feature ul{padding-left:20px;margin:15px 0;color:#d4e0d8}
-.search{width:100%;padding:14px 16px;border-radius:10px;border:1px solid var(--border);background:#102622;color:white;margin:15px 0 22px;font-size:15px;outline:none}
-.search:focus{border-color:var(--green)}
-.article{margin-top:15px}
-.article h3{margin:15px 0 5px}
-.article p{color:var(--muted);font-size:14px}
-.notice{background:#1d3427;border-left:4px solid var(--green);padding:16px;border-radius:7px;font-size:13px;color:#d5e6d8;margin:20px 0}
-footer{border-top:1px solid var(--border);padding:35px 20px;margin-top:30px;background:#061512}
-.footer-grid{max-width:1150px;margin:auto;display:grid;grid-template-columns:2fr 1fr 1fr;gap:25px}
-footer p,footer a{color:var(--muted);font-size:13px}
-footer h3{margin-bottom:12px}
-footer a{display:block;margin:7px 0}
-footer a:hover{color:var(--green)}
-.copyright{text-align:center;color:var(--muted);font-size:12px;margin-top:30px}
-@media(max-width:750px){
-.hero-grid{grid-template-columns:1fr}
-.grid{grid-template-columns:1fr}
-.footer-grid{grid-template-columns:1fr}
-nav{display:none;position:absolute;top:65px;left:0;width:100%;background:#071a18;padding:20px;flex-direction:column}
-nav.open{display:flex}
-.menu{display:block}
-.hero{padding-top:40px}
-.hero-img{height:230px}
-}
-</style>
+<link rel="stylesheet" href="home.css">
 </head>
-
 <body>
 
-<header>
-<div class="nav">
+<header><div class="nav">
 <a class="logo" href="index.html">☀ योजना<span>ऊर्जा</span></a>
-<button class="menu" onclick="toggleMenu()">☰</button>
+<button class="menu" onclick="document.getElementById('nav').classList.toggle('open')">☰</button>
 <nav id="nav">
 <a href="index.html">होम</a>
 <a href="#schemes">योजनाएँ</a>
@@ -87,16 +22,138 @@ nav.open{display:flex}
 <a href="about.html">हमारे बारे में</a>
 <a href="contact.html">संपर्क</a>
 </nav>
-</div>
-</header>
+</div></header>
 
-<main>
-
-<section class="hero">
-<div class="container hero-grid">
+<section class="hero"><div class="container hero-grid">
 <div>
 <span class="tag">भारत • महाराष्ट्र • सोलर ऊर्जा</span>
 <h1>जानिए सरकारी <span>योजनाएँ और सोलर के फायदे</span></h1>
 <p>भारत सरकार की योजनाओं, महाराष्ट्र शासन की योजनाओं, सोलर पैनल सब्सिडी, छात्रवृत्ति और आवेदन की उपयोगी जानकारी के लिए आपका सूचना केंद्र।</p>
 <a href="#schemes" class="btn">योजनाएँ देखें →</a>
-<a href="#solar" class="btn
+<a href="#solar" class="btn btn-outline">सोलर गाइड</a>
+</div>
+<img class="hero-img" src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1000" alt="धूप में सोलर पैनल">
+</div></section>
+
+<section class="section container" id="schemes">
+<h2 class="section-title">सरकारी योजनाएँ देखें</h2>
+<p class="section-sub">श्रेणी के अनुसार उपयोगी जानकारी पाएँ।</p>
+<input class="search" id="search" placeholder="योजना, सोलर, छात्रवृत्ति खोजें..." oninput="searchCards()">
+<div class="grid" id="schemeGrid">
+
+<div class="card" data-search="solar surya ghar सोलर सूर्य घर बिजली सब्सिडी">
+<div class="icon">☀️</div>
+<h3>पीएम सूर्य घर योजना</h3>
+<p>रूफटॉप सोलर, पात्रता, सब्सिडी और आवेदन प्रक्रिया की जानकारी पाएँ।</p>
+<a href="pm-surya-ghar-yojana.html">पूरी जानकारी पढ़ें →</a>
+<a href="https://pmsuryaghar.gov.in/" target="_blank" rel="noopener">आधिकारिक पोर्टल →</a>
+</div>
+
+<div class="card" data-search="maharashtra mahadbt महाराष्ट्र महाडीबीटी छात्रवृत्ति किसान">
+<div class="icon">🏛️</div>
+<h3>महाराष्ट्र की योजनाएँ</h3>
+<p>राज्य की कल्याणकारी योजनाएँ, छात्रवृत्ति और प्रत्यक्ष लाभ हस्तांतरण कार्यक्रम देखें।</p>
+<a href="https://mahadbt.maharashtra.gov.in/" target="_blank" rel="noopener">महाडीबीटी पोर्टल →</a>
+</div>
+
+<div class="card" data-search="farmers solar pump किसान कृषि सोलर पंप">
+<div class="icon">🌾</div>
+<h3>किसान योजनाएँ</h3>
+<p>किसानों के लिए कृषि सहायता और सोलर ऊर्जा के विकल्पों की जानकारी।</p>
+<a href="https://mahadbt.maharashtra.gov.in/" target="_blank" rel="noopener">पोर्टल देखें →</a>
+</div>
+
+<div class="card" data-search="student scholarship छात्र छात्रवृत्ति शिक्षा">
+<div class="icon">🎓</div>
+<h3>छात्र छात्रवृत्ति</h3>
+<p>छात्रवृत्ति की श्रेणियाँ, ज़रूरी दस्तावेज़ और आवेदन के चरण समझें।</p>
+<a href="https://scholarships.gov.in/" target="_blank" rel="noopener">राष्ट्रीय छात्रवृत्ति पोर्टल →</a>
+</div>
+
+<div class="card" data-search="women welfare महिला कल्याण सरकारी योजना">
+<div class="icon">👩</div>
+<h3>महिला कल्याण</h3>
+<p>महिलाओं के लिए सरकारी सहायता और कल्याणकारी योजनाओं की जानकारी पाएँ।</p>
+<a href="https://www.india.gov.in/" target="_blank" rel="noopener">सरकारी पोर्टल →</a>
+</div>
+
+<div class="card" data-search="government jobs सरकारी नौकरी भर्ती">
+<div class="icon">💼</div>
+<h3>सरकारी नौकरी</h3>
+<p>आधिकारिक भर्ती सूचनाएँ खोजें और पात्रता की शर्तें समझें।</p>
+<a href="https://www.ncs.gov.in/" target="_blank" rel="noopener">राष्ट्रीय करियर सेवा →</a>
+</div>
+
+</div>
+</section>
+
+<section class="section container" id="solar">
+<div class="feature">
+<span class="tag">सोलर ऊर्जा गाइड</span>
+<h2>पीएम सूर्य घर: मुफ़्त बिजली योजना</h2>
+<p>यह सरकारी योजना अपने घर की छत पर ग्रिड से जुड़ा रूफटॉप सोलर सिस्टम लगाने वाले पात्र परिवारों की सहायता करती है।</p>
+<ul>
+<li>रूफटॉप सोलर सिस्टम की जानकारी।</li>
+<li>सब्सिडी और पात्रता की जानकारी।</li>
+<li>पंजीकरण और आवेदन के चरण।</li>
+<li>वेंडर चुनने और इंस्टॉलेशन की जानकारी।</li>
+</ul>
+<a class="btn" href="pm-surya-ghar-yojana.html">पूरा लेख पढ़ें →</a>
+<div class="notice">ज़रूरी: सब्सिडी मौजूदा नियमों और पात्रता पर निर्भर करती है। ताज़ा राशि हमेशा आधिकारिक पोर्टल पर जाँच लें।</div>
+</div>
+</section>
+
+<section class="section container" id="maharashtra">
+<h2 class="section-title">महाराष्ट्र शासन की जानकारी</h2>
+<p class="section-sub">महाराष्ट्र के नागरिकों के लिए आधिकारिक स्रोत।</p>
+<div class="grid">
+<div class="card"><div class="icon">📋</div><h3>महाडीबीटी</h3><p>छात्रवृत्ति, किसान लाभ और कल्याणकारी योजनाएँ।</p>
+<a href="https://mahadbt.maharashtra.gov.in/" target="_blank" rel="noopener">आधिकारिक वेबसाइट →</a></div>
+<div class="card"><div class="icon">☀️</div><h3>महाराष्ट्र सोलर</h3><p>राज्य ऊर्जा विभाग की सोलर कार्यक्रमों की जानकारी।</p>
+<a href="https://energy.maharashtra.gov.in/en/" target="_blank" rel="noopener">ऊर्जा विभाग →</a></div>
+<div class="card"><div class="icon">🏢</div><h3>आपले सरकार</h3><p>महाराष्ट्र शासन की नागरिक सेवाओं का लाभ लें।</p>
+<a href="https://aaplesarkar.mahaonline.gov.in/" target="_blank" rel="noopener">आधिकारिक पोर्टल →</a></div>
+</div>
+</section>
+
+<section class="section container">
+<div class="feature">
+<h2>आवेदन से पहले ज़रूर पढ़ें</h2>
+<p>योजनाऊर्जा एक स्वतंत्र सूचना वेबसाइट है। हम किसी सरकारी विभाग से संबद्ध नहीं हैं। पात्रता, अंतिम तिथि और लाभ की जानकारी हमेशा आधिकारिक स्रोतों से जाँच लें।</p>
+</div>
+</section>
+
+<footer>
+<div class="footer-grid">
+<div>
+<h2>☀ योजना<span style="color:#b7f36b">ऊर्जा</span></h2>
+<p>सरकारी योजनाओं, सोलर ऊर्जा और जन-जागरूकता के लिए आपका सूचना केंद्र।</p>
+</div>
+<div>
+<h3>त्वरित लिंक</h3>
+<a href="index.html">होम</a>
+<a href="#schemes">योजनाएँ</a>
+<a href="pm-surya-ghar-yojana.html">सोलर गाइड</a>
+<a href="about.html">हमारे बारे में</a>
+</div>
+<div>
+<h3>कानूनी और सहायता</h3>
+<a href="privacy-policy.html">गोपनीयता नीति</a>
+<a href="disclaimer.html">अस्वीकरण</a>
+<a href="contact.html">संपर्क करें</a>
+</div>
+</div>
+<div class="copyright">© 2026 योजनाऊर्जा. सर्वाधिकार सुरक्षित।</div>
+</footer>
+
+<script>
+function searchCards(){
+var q=document.getElementById('search').value.toLowerCase();
+document.querySelectorAll('#schemeGrid .card').forEach(function(c){
+var t=(c.innerText+' '+c.dataset.search).toLowerCase();
+c.style.display=t.indexOf(q)>-1?'block':'none';
+});
+}
+</script>
+</body>
+</html>
