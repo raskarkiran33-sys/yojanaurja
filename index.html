@@ -86,7 +86,25 @@
 
 </div>
 </section>
-
+<section class="section container" id="articles">
+<h2 class="section-title">नए लेख</h2>
+<p class="section-sub">ताज़ा जानकारी और अपडेट।</p>
+<div class="grid" id="articleGrid"></div>
+</section>
+<script>
+fetch('articles.json?'+Date.now()).then(function(r){return r.json()}).then(function(list){
+var g=document.getElementById('articleGrid');
+list.forEach(function(a){
+var c=document.createElement('div');c.className='card';
+var i=document.createElement('img');i.src='thumbs/'+a.slug+'.svg';i.alt=a.title;
+i.style.cssText='width:100%;border-radius:10px;margin-bottom:12px';
+var h=document.createElement('h3');h.textContent=a.title;
+var p=document.createElement('p');p.textContent=a.desc;
+var l=document.createElement('a');l.href=a.slug+'.html';l.textContent='पूरा लेख पढ़ें →';
+c.appendChild(i);c.appendChild(h);c.appendChild(p);c.appendChild(l);g.appendChild(c);
+});
+}).catch(function(){});
+</script>
 <section class="section container" id="solar">
 <div class="feature">
 <span class="tag">सोलर ऊर्जा गाइड</span>
