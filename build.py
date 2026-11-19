@@ -100,3 +100,10 @@ for fn in glob.glob('*.html'):
     s = open(fn, encoding='utf-8').read()
     if TAG not in s and '</body>' in s:
         open(fn, 'w', encoding='utf-8').write(s.replace('</body>', TAG + '\n</body>'))
+        TAG2 = '<script src="ads-more.js" defer></script>'
+for fn in glob.glob('*.html'):
+    if fn.startswith('google') or fn in NO_ADS:
+        continue
+    s = open(fn, encoding='utf-8').read()
+    if TAG2 not in s and '</body>' in s:
+        open(fn, 'w', encoding='utf-8').write(s.replace('</body>', TAG2 + '\n</body>'))
