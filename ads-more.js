@@ -1,13 +1,19 @@
 (function(){
 var CFG={
   social:'',
-  popunder:'',
+  popunder:'https://afders.org/1/756599932d4bbf571aed4d08d16cbb21',
   interstitial:'',
-  native:{src:'',id:''},
+  native:{
+    src:'https://bicea.org/21/65619057b7be7e76648c669a0654a6d8',
+    id:'container-65619057b7be7e76648c669a0654a6d8'
+  },
   bannerTop:{key:'',src:'',w:320,h:50},
   bannerMid:{key:'',src:'',w:300,h:250},
   bannerBottom:{key:'',src:'',w:300,h:250},
-  directLink:{url:'',text:''}
+  directLink:{
+    url:'https://arwf.org/4/2949add55c81d958376a7283236b7306ad',
+    text:'प्रायोजित लिंक'
+  }
 };
 
 function addScript(src){
