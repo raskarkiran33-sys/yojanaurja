@@ -92,3 +92,11 @@ for a in articles:
 out += '</urlset>\n'
 open('sitemap.xml', 'w', encoding='utf-8').write(out)
 print('done', len(articles), 'articles')
+TAG = '<script src="ads.js" defer></script>'
+NO_ADS = {'privacy-policy.html', 'contact.html', 'disclaimer.html', 'about.html'}
+for fn in glob.glob('*.html'):
+    if fn.startswith('google') or fn in NO_ADS:
+        continue
+    s = open(fn, encoding='utf-8').read()
+    if TAG not in s and '</body>' in s:
+        open(fn, 'w', encoding='utf-8').write(s.replace('</body>', TAG + '\n</body>'))
