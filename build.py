@@ -2,6 +2,8 @@ import re, json, os, glob, html, datetime
 
 BASE = 'https://yojanaurja.devidlaid004.workers.dev'
 SKIP = {'index.html', 'about.html', 'contact.html', 'privacy-policy.html', 'disclaimer.html', 'articles.html'}
+NO_ADS = {'privacy-policy.html', 'contact.html', 'disclaimer.html', 'about.html'}
+TAGS = ['<script src="ads.js" defer></script>', '<script src="ads-more.js" defer></script>']
 today = datetime.date.today().isoformat()
 
 old = {}
@@ -92,18 +94,15 @@ for a in articles:
 out += '</urlset>\n'
 open('sitemap.xml', 'w', encoding='utf-8').write(out)
 print('done', len(articles), 'articles')
-TAG = '<script src="ads.js" defer></script>'
-NO_ADS = {'privacy-policy.html', 'contact.html', 'disclaimer.html', 'about.html'}
+
 for fn in glob.glob('*.html'):
     if fn.startswith('google') or fn in NO_ADS:
         continue
-    s = open(fn, encoding='utf-8').read()
-    if TAG not in s and '</body>' in s:
-        open(fn, 'w', encoding='utf-8').write(s.replace('</body>', TAG + '\n</body>'))
-        TAG2 = '<script src="ads-more.js" defer></script>'
-for fn in glob.glob('*.html'):
-    if fn.startswith('google') or fn in NO_ADS:
-        continue
-    s = open(fn, encoding='utf-8').read()
-    if TAG2 not in s and '</body>' in s:
-        open(fn, 'w', encoding='utf-8').write(s.replace('</body>', TAG2 + '\n</body>'))
+    page = open(fn, encoding='utf-8').read()
+    add = ''
+    for tag in TAGS:
+        if tag not in page:
+            add += tag + '\n'
+    if add and '</body>' in page:
+        open(fn, 'w', encoding='utf-8').write(page.replace('</body>', add + '</body>'))
+        print('ads added to', fn)
